@@ -94,7 +94,7 @@ Sprite = function () {
 
   this.children = {};
 
-  this.color    = 'black';
+  this.color    = 'red';
   this.solid    = false;
   this.visible  = false;
   this.reap     = false;
@@ -379,7 +379,7 @@ Ship = function () {
               0, -11,
               6,   7]);
 
-  this.color = 'navy';
+  this.color = 'green';
   this.solid = true;
 
   this.children.exhaust = new Sprite();
@@ -660,7 +660,7 @@ Asteroid = function () {
               -4, -10,
               -4,  -5]);
 
-  this.color = 'lightgray';
+  this.color = 'black';
   this.solid = true;
   this.visible = true;
   this.scale = 6;
@@ -712,7 +712,7 @@ Explosion = function () {
       this.context.strokeStyle = 'red';
       this.context.lineWidth = 1.0 / this.scale;
       this.context.beginPath();
-      for (var i = 0; i < 5; i++) {
+      for (var i = 0; i < 6; i++) {
         var line = this.lines[i];
         this.context.moveTo(line[0], line[1]);
         this.context.lineTo(line[2], line[3]);
